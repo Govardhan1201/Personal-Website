@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nagireddy Govardhan — AI Enthusiast & CS Engineer</title>
+    <meta name="description" content="Portfolio of Nagireddy Govardhan — CSE Student, AI Enthusiast & Gen AI Explorer from Visakhapatnam, India.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- ===== LOADER ===== -->
+    <div id="loader" class="loader">
+        <div class="loader-inner">
+            <div class="loader-label">LOADING PORTFOLIO</div>
+            <div class="loader-bar-wrap">
+                <div class="loader-bar" id="loaderBar"></div>
+            </div>
+            <div class="loader-percent" id="loaderPercent">0%</div>
+        </div>
+    </div>
+
+    <!-- ===== NAVIGATION ===== -->
+    <header id="site-header">
+        <a href="#home" class="site-logo">NG<span class="logo-dot">.</span></a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
+            MENU <span class="menu-eq">=</span>
+        </button>
+    </header>
+
+    <!-- Full-screen Nav Overlay -->
+    <div class="nav-overlay" id="navOverlay">
+        <button class="nav-close" id="navClose" aria-label="Close menu">✕</button>
+        <div class="nav-overlay-inner">
+            <p class="nav-tagline">Building at the intersection of AI, code &amp; curiosity.</p>
+            <nav class="nav-links">
+                <a href="#home"     class="nav-item" data-num="01">Map</a>
+                <a href="#projects" class="nav-item" data-num="02">Projects</a>
+                <a href="#about"    class="nav-item" data-num="03">About</a>
+                <a href="#skills"   class="nav-item" data-num="04">Skills</a>
+                <a href="#contact"  class="nav-item" data-num="05">Contact</a>
+            </nav>
+            <div class="nav-socials">
+                <a href="https://www.linkedin.com/in/govardhan-nagireddy-63a88a396/" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="https://github.com/Govardhan1201" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://www.instagram.com/im_govardhan/" target="_blank" rel="noopener">Instagram</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== HERO / MAP SECTION ===== -->
+    <section id="home" class="map-section">
+
+        <!-- Dotted background pattern -->
+        <div class="map-dots" aria-hidden="true"></div>
+
+        <!-- Hero headline (top-left) -->
+        <div class="map-headline">
+            <span class="map-headline-sub">CSE Student · AI Explorer · Builder</span>
+            <h1 class="map-headline-h1">IDEAS<br>PIONEERING,<br><em>ME</em><br>ENGINEERING</h1>
+        </div>
+
+        <!-- SVG Island Map Canvas -->
+        <div class="map-canvas" id="mapCanvas">
+            <svg id="islandMap" viewBox="0 0 1000 560" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
+
+                <!-- Ocean / sky deco elements -->
+                <circle cx="60" cy="80" r="30" fill="#ffe066" opacity="0.35"/>
+                <circle cx="940" cy="70" r="22" fill="#ff9f43" opacity="0.3"/>
+                <rect x="870" y="20" width="60" height="60" rx="12" fill="#00d2d3" opacity="0.18" transform="rotate(15 900 50)"/>
+
+                <!-- ─────────────────────── PROJECTS ISLE (center-left / golden) ─────────────────────── -->
+                <g class="island-zone" id="zone-projects" data-target="#projects" data-label="Projects Isle" tabindex="0" role="link" aria-label="Go to Projects section">
+                    <!-- landmass -->
+                    <ellipse cx="310" cy="310" rx="210" ry="115" fill="#f5c842"/>
+                    <ellipse cx="310" cy="290" rx="165" ry="90" fill="#ffd966"/>
+                    <!-- hills / buildings -->
+                    <rect x="220" y="220" width="38" height="55" rx="4" fill="#e55a2b"/>
+                    <rect x="265" y="205" width="30" height="70" rx="4" fill="#c0392b"/>
+                    <rect x="300" y="215" width="25" height="60" rx="3" fill="#e55a2b"/>
+                    <rect x="330" y="230" width="32" height="45" rx="4" fill="#f97316"/>
+                    <!-- windows -->
+                    <rect x="228" y="228" width="8" height="8" rx="1" fill="#fff" opacity="0.7"/>
+                    <rect x="240" y="228" width="8" height="8" rx="1" fill="#fff" opacity="0.7"/>
+                    <rect x="228" y="242" width="8" height="8" rx="1" fill="#fff" opacity="0.5"/>
+                    <rect x="272" y="215" width="8" height="8" rx="1" fill="#fff" opacity="0.7"/>
+                    <rect x="284" y="215" width="8" height="8" rx="1" fill="#fff" opacity="0.5"/>
+                    <!-- trees -->
+                    <circle cx="200" cy="298" r="14" fill="#27ae60"/>
+                    <circle cx="215" cy="293" r="10" fill="#2ecc71"/>
+                    <circle cx="390" cy="290" r="16" fill="#27ae60"/>
+                    <circle cx="375" cy="295" r="11" fill="#2ecc71"/>
+                    <!-- road -->
+                    <path d="M 340,320 Q 370,310 400,320" stroke="#c0392b" stroke-width="3" fill="none" stroke-dasharray="5,4"/>
+                    <!-- info pin -->
+                    <circle cx="310" cy="185" r="14" fill="white" stroke="#222" stroke-width="2"/>
+                    <text x="310" y="190" text-anchor="middle" font-size="13" font-weight="bold" fill="#222">i</text>
+                    <!-- zone label -->
+                    <rect x="222" y="340" width="178" height="32" rx="16" fill="white" stroke="#ddd" stroke-width="1"/>
+                    <text x="311" y="361" text-anchor="middle" font-size="13" font-weight="600" fill="#222">Projects Isle</text>
+                </g>
+
+                <!-- ─────────────────────── ABOUT ISLAND (top-right / orange) ─────────────────────── -->
+                <g class="island-zone" id="zone-about" data-target="#about" data-label="About Island" tabindex="0" role="link" aria-label="Go to About section">
+                    <ellipse cx="730" cy="200" rx="195" ry="105" fill="#e55a2b"/>
+                    <ellipse cx="730" cy="185" rx="155" ry="82" fill="#f97316"/>
+                    <!-- city blocks -->
+                    <rect x="660" y="127" width="28" height="45" rx="3" fill="#c0392b"/>
+                    <rect x="695" y="115" width="22" height="57" rx="3" fill="#922b21"/>
+                    <rect x="723" y="125" width="30" height="47" rx="3" fill="#c0392b"/>
+                    <rect x="758" y="118" width="25" height="54" rx="3" fill="#e74c3c"/>
+                    <!-- windows -->
+                    <rect x="666" y="133" width="7" height="7" rx="1" fill="#fff" opacity="0.6"/>
+                    <rect x="677" y="133" width="7" height="7" rx="1" fill="#fff" opacity="0.4"/>
+                    <rect x="700" y="122" width="7" height="7" rx="1" fill="#fff" opacity="0.6"/>
+                    <!-- circular structure (lighthouse / about avatar) -->
+                    <circle cx="800" cy="160" r="22" fill="#922b21"/>
+                    <circle cx="800" cy="160" r="14" fill="#c0392b"/>
+                    <circle cx="800" cy="160" r="6"  fill="#fff"/>
+                    <!-- trees -->
+                    <circle cx="645" cy="185" r="12" fill="#27ae60"/>
+                    <circle cx="658" cy="180" r="9" fill="#2ecc71"/>
+                    <circle cx="820" cy="190" r="13" fill="#27ae60"/>
+                    <!-- info pin -->
+                    <circle cx="730" cy="82" r="14" fill="white" stroke="#222" stroke-width="2"/>
+                    <text x="730" y="87" text-anchor="middle" font-size="13" font-weight="bold" fill="#222">i</text>
+                    <!-- label -->
+                    <rect x="648" y="215" width="165" height="32" rx="16" fill="white" stroke="#ddd" stroke-width="1"/>
+                    <text x="730" y="236" text-anchor="middle" font-size="13" font-weight="600" fill="#222">About Island</text>
+                </g>
+
+                <!-- ─────────────────────── SKILLS DISTRICT (bottom-center / teal) ─────────────────────── -->
+                <g class="island-zone" id="zone-skills" data-target="#skills" data-label="Skills District" tabindex="0" role="link" aria-label="Go to Skills section">
+                    <ellipse cx="560" cy="430" rx="200" ry="100" fill="#00b894"/>
+                    <ellipse cx="560" cy="415" rx="160" ry="78" fill="#00d2d3"/>
+                    <!-- tech grid blocks -->
+                    <rect x="490" y="360" width="36" height="36" rx="5" fill="#0984e3"/>
+                    <rect x="533" y="355" width="28" height="42" rx="4" fill="#6c5ce7"/>
+                    <rect x="568" y="362" width="32" height="35" rx="5" fill="#0984e3"/>
+                    <rect x="605" y="358" width="30" height="38" rx="4" fill="#00cec9"/>
+                    <!-- antenna / signal tower -->
+                    <line x1="508" y1="360" x2="508" y2="335" stroke="#white" stroke-width="2" stroke="white"/>
+                    <circle cx="508" cy="332" r="4" fill="white"/>
+                    <ellipse cx="508" cy="340" rx="10" ry="5" fill="none" stroke="white" stroke-width="1.5"/>
+                    <!-- info pin -->
+                    <circle cx="560" cy="318" r="14" fill="white" stroke="#222" stroke-width="2"/>
+                    <text x="560" y="323" text-anchor="middle" font-size="13" font-weight="bold" fill="#222">i</text>
+                    <!-- label -->
+                    <rect x="472" y="445" width="176" height="32" rx="16" fill="white" stroke="#ddd" stroke-width="1"/>
+                    <text x="560" y="466" text-anchor="middle" font-size="13" font-weight="600" fill="#222">Skills District</text>
+                </g>
+
+                <!-- ─────────────────────── CONTACT AREA (bottom-left / maroon) ─────────────────────── -->
+                <g class="island-zone" id="zone-contact" data-target="#contact" data-label="Contact Area" tabindex="0" role="link" aria-label="Go to Contact section">
+                    <ellipse cx="140" cy="450" rx="140" ry="75" fill="#6b1c1c"/>
+                    <ellipse cx="140" cy="438" rx="110" ry="58" fill="#922b21"/>
+                    <!-- mailbox / comm tower -->
+                    <rect x="92" y="393" width="40" height="32" rx="4" fill="#c0392b"/>
+                    <rect x="100" y="387" width="24" height="8" rx="2" fill="#922b21"/>
+                    <circle cx="112" cy="405" r="5" fill="#fff" opacity="0.6"/>
+                    <path d="M 152,400 Q 165,390 178,400 Q 165,410 152,400 Z" fill="#e74c3c"/>
+                    <!-- trees -->
+                    <circle cx="78" cy="440" r="11" fill="#27ae60"/>
+                    <circle cx="195" cy="432" r="10" fill="#27ae60"/>
+                    <!-- info pin -->
+                    <circle cx="140" cy="362" r="14" fill="white" stroke="#222" stroke-width="2"/>
+                    <text x="140" y="367" text-anchor="middle" font-size="13" font-weight="bold" fill="#222">i</text>
+                    <!-- label -->
+                    <rect x="66" y="468" width="148" height="32" rx="16" fill="white" stroke="#ddd" stroke-width="1"/>
+                    <text x="140" y="489" text-anchor="middle" font-size="13" font-weight="600" fill="#222">Contact Area</text>
+                </g>
+
+                <!-- ─────────────────────── EDUCATION PEAK (top-center / purple-green) ─────────────────────── -->
+                <g class="island-zone" id="zone-edu" data-target="#about" data-label="Education Peak" tabindex="0" role="link" aria-label="Go to About section">
+                    <ellipse cx="500" cy="175" rx="145" ry="80" fill="#8e44ad"/>
+                    <polygon points="430,175 500,70 570,175" fill="#9b59b6"/>
+                    <polygon points="455,175 500,95 545,175" fill="#f8f9fa" opacity="0.18"/>
+                    <!-- snow cap -->
+                    <polygon points="480,100 500,70 520,100" fill="white" opacity="0.7"/>
+                    <!-- trees on slope -->
+                    <polygon points="438,165 447,142 456,165" fill="#27ae60"/>
+                    <polygon points="548,165 557,142 566,165" fill="#27ae60"/>
+                    <!-- info pin -->
+                    <circle cx="500" cy="90" r="14" fill="white" stroke="#222" stroke-width="2"/>
+                    <text x="500" y="95" text-anchor="middle" font-size="13" font-weight="bold" fill="#222">i</text>
+                    <!-- label -->
+                    <rect x="415" y="188" width="170" height="32" rx="16" fill="white" stroke="#ddd" stroke-width="1"/>
+                    <text x="500" y="209" text-anchor="middle" font-size="13" font-weight="600" fill="#222">Education Peak</text>
+                </g>
+
+                <!-- Ocean decorations -->
+                <!-- Helicopter -->
+                <g transform="translate(850,400) rotate(-10)">
+                    <rect x="-18" y="-6" width="36" height="12" rx="5" fill="#e74c3c"/>
+                    <ellipse cx="20" cy="-2" rx="6" ry="4" fill="#c0392b"/>
+                    <line x1="-25" y1="-10" x2="25" y2="-10" stroke="#333" stroke-width="2"/>
+                    <line x1="-5" y1="-10" x2="-5" y2="-6" stroke="#333" stroke-width="1.5"/>
+                </g>
+                <!-- Boat -->
+                <g transform="translate(430,510)">
+                    <path d="M-40,0 Q0,-18 40,0 L30,12 L-30,12 Z" fill="#e74c3c"/>
+                    <rect x="-5" y="-30" width="4" height="30" fill="#922b21"/>
+                    <path d="M-1,-30 L20,-15 L-1,-5 Z" fill="#f5c842"/>
+                </g>
+                <!-- UFO deco -->
+                <g transform="translate(880,290)">
+                    <ellipse cx="0" cy="0" rx="22" ry="8" fill="#9b59b6" opacity="0.8"/>
+                    <ellipse cx="0" cy="-5" rx="11" ry="9" fill="#8e44ad" opacity="0.8"/>
+                    <circle cx="-7" cy="2" r="2.5" fill="#ffe066"/>
+                    <circle cx="0"  cy="3" r="2.5" fill="#ffe066"/>
+                    <circle cx="7"  cy="2" r="2.5" fill="#ffe066"/>
+                </g>
+
+
+
+                <!-- Zoom controls (Polecat style) -->
+            </svg>
+
+            <!-- Tooltip -->
+            <div class="map-tooltip" id="mapTooltip"></div>
+
+            <!-- Zoom buttons -->
+            <div class="map-zoom">
+                <button class="zoom-btn" id="zoomIn"  aria-label="Zoom in">+</button>
+                <button class="zoom-btn" id="zoomOut" aria-label="Zoom out">−</button>
+            </div>
+        </div>
+
+        <!-- Right edge teaser text (Polecat style) -->
+        <div class="map-edge-text" aria-hidden="true">
+            <p>AI · CODE · CREATIVITY</p>
+        </div>
+
+    </section>
+
+    <!-- ===== PROJECTS SECTION ===== -->
+    <section id="projects" class="content-section projects-section">
+        <div class="section-inner">
+            <div class="section-eyebrow">What I've Built</div>
+            <h2 class="section-title stencil">PROJECTS<br><span class="outline-text">PORTFOLIO</span></h2>
+
+            <div class="projects-list">
+
+                <!-- Project 01 -->
+                <div class="project-card" style="--proj-bg:#e55a2b; --proj-fg:#fff;">
+                    <div class="project-number">01</div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Bus API</span>
+                        </div>
+                        <h3 class="project-name">MārgaDarshi</h3>
+                        <p class="project-desc">A multilingual city bus information web app for Visakhapatnam. Helps commuters find routes, fares, and stops in their own language — solving last-mile transport information gaps.</p>
+                        <div class="project-meta">
+                            <span><i class="fas fa-bus"></i> Public Transport</span>
+                            <span><i class="fas fa-language"></i> Multilingual</span>
+                        </div>
+                    </div>
+                    <div class="project-visual">
+                        <div class="project-icon-wrap">
+                            <i class="fas fa-map-marked-alt"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 02 -->
+                <div class="project-card" style="--proj-bg:#8e44ad; --proj-fg:#fff;">
+                    <div class="project-number">02</div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span>React</span><span>Node.js</span><span>MongoDB</span><span>AI Scheduler</span>
+                        </div>
+                        <h3 class="project-name">Dhruva</h3>
+                        <p class="project-desc">An intelligent study planning application that creates personalised daily schedules, tracks task completion, sends notifications, and visualises progress through a smart calendar — powered by AI scheduling logic.</p>
+                        <div class="project-meta">
+                            <span><i class="fas fa-brain"></i> AI-Driven</span>
+                            <span><i class="fas fa-calendar-check"></i> Smart Scheduler</span>
+                        </div>
+                    </div>
+                    <div class="project-visual">
+                        <div class="project-icon-wrap">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 03 -->
+                <div class="project-card" style="--proj-bg:#00b894; --proj-fg:#fff;">
+                    <div class="project-number">03</div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                        </div>
+                        <h3 class="project-name">VIHARA</h3>
+                        <p class="project-desc">An offbeat travel discovery website showcasing hidden destinations organized by city and zone. Designed specifically for students and explorers looking for unique adventures.</p>
+                        <div class="project-meta">
+                            <span><i class="fas fa-map-signs"></i> Travel & Discovery</span>
+                            <span><i class="fas fa-compass"></i> Explorers</span>
+                        </div>
+                    </div>
+                    <div class="project-visual">
+                        <div class="project-icon-wrap">
+                            <i class="fas fa-plane-departure"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 04 -->
+                <div class="project-card" style="--proj-bg:#0984e3; --proj-fg:#fff;">
+                    <div class="project-number">04</div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span>Python</span><span>FastAPI</span><span>SQLite</span><span>HTML/CSS/JS</span>
+                        </div>
+                        <h3 class="project-name">VIIT Mart</h3>
+                        <p class="project-desc">A full-stack college e-commerce platform enabling students to buy and sell within the campus. Features a buyer dashboard, seller dashboard, admin portal and a real-time product catalogue.</p>
+                        <div class="project-meta">
+                            <span><i class="fas fa-university"></i> Campus Commerce</span>
+                            <span><i class="fas fa-users"></i> Multi-role Platform</span>
+                        </div>
+                    </div>
+                    <div class="project-visual">
+                        <div class="project-icon-wrap">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ABOUT SECTION ===== -->
+    <section id="about" class="content-section about-section">
+        <div class="section-inner">
+            <div class="section-eyebrow">Who I Am</div>
+            <h2 class="section-title stencil white">I AM AN<br><span class="outline-text-light">AI EXPEDITOR</span></h2>
+
+            <div class="about-grid">
+                <div class="about-text-block">
+                    <p class="about-lead">I'm <strong>Nagireddy Govardhan</strong> — a <strong>Computer Science Engineering</strong> student from Visakhapatnam, India, with a deep passion for AI and emerging technologies.</p>
+                    <p>I thrive at the intersection of engineering and creativity — building useful products, sharing knowledge through presentations, and relentlessly exploring what's next in the AI landscape.</p>
+                    <div class="about-details">
+                        <div class="about-detail-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Visakhapatnam, Andhra Pradesh, India</span>
+                        </div>
+                        <div class="about-detail-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>B.Tech · Computer Science Engineering · Ongoing</span>
+                        </div>
+                        <div class="about-detail-item">
+                            <i class="fas fa-rocket"></i>
+                            <span>Seeking AI Internships · Open to Research Collaboration</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-stats-block">
+                    <div class="stat-card">
+                        <div class="stat-num">3+</div>
+                        <div class="stat-label">Projects Built</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-num">3</div>
+                        <div class="stat-label">Certifications</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-num">∞</div>
+                        <div class="stat-label">Curiosity Level</div>
+                    </div>
+                    <div class="stat-card highlight-stat">
+                        <div class="stat-num">AI</div>
+                        <div class="stat-label">Primary Focus</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Education Timeline -->
+            <div class="edu-timeline">
+                <div class="edu-timeline-label">EDUCATION PATH</div>
+                <div class="edu-item">
+                    <div class="edu-dot current"></div>
+                    <div class="edu-content">
+                        <span class="edu-badge">Currently Enrolled</span>
+                        <h3>B.Tech — Computer Science Engineering</h3>
+                        <p>Core: Programming Languages · DSA · AI &amp; ML · Blockchain · IoT · Gen AI · AI Vector Search · Data Science · Engineering Mathematics</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Certs row -->
+            <div class="cert-row">
+                <button id="viewCertsBtn" class="cert-pill popup-btn" style="cursor: pointer; border: none; font-size: 1rem; width: 100%; justify-content: center; max-width: 300px;">
+                    <i class="fas fa-award"></i> View Certifications
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SKILLS SECTION ===== -->
+    <section id="skills" class="content-section skills-section">
+        <div class="section-inner">
+            <div class="section-eyebrow">What I Aspire to know</div>
+            <h2 class="section-title stencil">DEVELOPING<br><span class="outline-text">BRIDGES TO<br>THE FUTURE</span></h2>
+
+            <div class="skills-grid">
+                <div class="skill-block" style="--sk-color:#f5c842;">
+                    <div class="skill-icon"><i class="fas fa-robot"></i></div>
+                    <h3>AI & Gen AI</h3>
+                    <p>Prompt Engineering, AI fundamentals, Large Language Models, Oracle AI, Gen AI research and exploration.</p>
+                </div>
+                <div class="skill-block" style="--sk-color:#e55a2b;">
+                    <div class="skill-icon"><i class="fas fa-code"></i></div>
+                    <h3>Programming</h3>
+                    <p>Python, JavaScript, HTML/CSS, SQL. Building full-stack web applications with modern frameworks.</p>
+                </div>
+                <div class="skill-block" style="--sk-color:#8e44ad;">
+                    <div class="skill-icon"><i class="fas fa-project-diagram"></i></div>
+                    <h3>DSA & Algorithms</h3>
+                    <p>Data Structures, Algorithms, Problem Solving, competitive programming and hackathons.</p>
+                </div>
+                <div class="skill-block" style="--sk-color:#0984e3;">
+                    <div class="skill-icon"><i class="fas fa-link"></i></div>
+                    <h3>Blockchain</h3>
+                    <p>Blockchain fundamentals, distributed ledger technology, DeFi concepts, and engineering applications of decentralisation.</p>
+                </div>
+                <div class="skill-block" style="--sk-color:#00b894;">
+                    <div class="skill-icon"><i class="fas fa-cloud-upload-alt"></i></div>
+                    <h3>Cloud & Networking</h3>
+                    <p>Aviatrix MultiCloud Networking, cloud architecture basics, IoT system integration.</p>
+                </div>
+                <div class="skill-block" style="--sk-color:#e17055;">
+                    <div class="skill-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+                    <h3>Communication</h3>
+                    <p>Technical presentations, educational content creation, knowledge sharing on complex engineering topics.</p>
+                </div>
+            </div>
+
+            <!-- Hobbies Row -->
+            <div class="hobbies-strip">
+                <span class="hobby-pill"><i class="fas fa-laptop-code"></i> Hackathons</span>
+                <span class="hobby-pill"><i class="fas fa-chess"></i> Chess</span>
+                <span class="hobby-pill"><i class="fas fa-futbol"></i> Football</span>
+                <span class="hobby-pill"><i class="fas fa-badminton"></i> Badminton</span>
+                <span class="hobby-pill"><i class="fas fa-book-reader"></i> Research</span>
+                <span class="hobby-pill"><i class="fas fa-briefcase"></i> Career Growth</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT SECTION ===== -->
+    <section id="contact" class="content-section contact-section">
+        <div class="section-inner">
+            <div class="section-eyebrow light">Let's Connect</div>
+            <h2 class="section-title stencil white">STARTING<br><span class="outline-text-light">A NEW<br>JOURNEY</span></h2>
+
+            <p class="contact-subtitle">Open to AI internships, research collaborations, and interesting projects.<br>Feel free to reach out any time.</p>
+
+            <div class="contact-links">
+                <a href="mailto:govardhannagireddy1201@gmail.com" class="contact-link-item">
+                    <span class="clink-icon"><i class="fas fa-envelope"></i></span>
+                    <span class="clink-text">
+                        <span class="clink-label">Email</span>
+                        <span class="clink-val">govardhannagireddy1201@gmail.com</span>
+                    </span>
+                    <span class="clink-arrow">↗</span>
+                </a>
+                <a href="tel:+919030536726" class="contact-link-item">
+                    <span class="clink-icon"><i class="fas fa-phone"></i></span>
+                    <span class="clink-text">
+                        <span class="clink-label">Phone</span>
+                        <span class="clink-val">+91 90305 36726</span>
+                    </span>
+                    <span class="clink-arrow">↗</span>
+                </a>
+                <a href="https://www.linkedin.com/in/govardhan-nagireddy-63a88a396/" target="_blank" rel="noopener" class="contact-link-item">
+                    <span class="clink-icon"><i class="fab fa-linkedin"></i></span>
+                    <span class="clink-text">
+                        <span class="clink-label">LinkedIn</span>
+                        <span class="clink-val">govardhan-nagireddy</span>
+                    </span>
+                    <span class="clink-arrow">↗</span>
+                </a>
+                <a href="https://github.com/Govardhan1201" target="_blank" rel="noopener" class="contact-link-item">
+                    <span class="clink-icon"><i class="fab fa-github"></i></span>
+                    <span class="clink-text">
+                        <span class="clink-label">GitHub</span>
+                        <span class="clink-val">Govardhan1201</span>
+                    </span>
+                    <span class="clink-arrow">↗</span>
+                </a>
+                <a href="https://www.instagram.com/im_govardhan/" target="_blank" rel="noopener" class="contact-link-item">
+                    <span class="clink-icon"><i class="fab fa-instagram"></i></span>
+                    <span class="clink-text">
+                        <span class="clink-label">Instagram</span>
+                        <span class="clink-val">im_govardhan</span>
+                    </span>
+                    <span class="clink-arrow">↗</span>
+                </a>
+                <a href="Nagireddy_Govardhan_CV.pdf" target="_blank" rel="noopener" class="contact-link-item">
+                    <span class="clink-icon"><i class="fas fa-download"></i></span>
+                    <span class="clink-text">
+                        <span class="clink-label">Resume</span>
+                        <span class="clink-val">Download CV</span>
+                    </span>
+                    <span class="clink-arrow">↗</span>
+                </a>
+            </div>
+
+            <div class="contact-location">
+                <i class="fas fa-map-marker-alt"></i> Visakhapatnam, Andhra Pradesh, India
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <a href="#home" class="footer-logo">NG<span class="logo-dot">.</span></a>
+            <p class="footer-copy">© 2026 Nagireddy Govardhan. All rights reserved.</p>
+            <p class="footer-tagline">Built with passion, curiosity &amp; a little bit of AI ✦</p>
+        </div>
+    </footer>
+
+    <!-- Certifications Modal (Placed at root to avoid grouping CSS transform issues) -->
+    <div id="certsModal" class="modal-overlay" aria-hidden="true">
+        <div class="modal-content">
+            <button class="modal-close" id="closeCertsModal" aria-label="Close modal">&times;</button>
+            <h3 class="modal-title" style="font-family: 'Space Grotesk', sans-serif; font-size: 1.8rem; margin-bottom: 1.5rem; color: #0e0e0e;">My Certifications</h3>
+            <div class="modal-list">
+                <a href="Certificates/Oracle GEN AI.pdf" target="_blank" class="modal-link">
+                    <i class="fas fa-file-alt"></i> Oracle Gen AI
+                </a>
+                <a href="Certificates/IBM Prompt Engineering.pdf" target="_blank" class="modal-link">
+                    <i class="fas fa-file-alt"></i> IBM Prompt Engineering
+                </a>
+                <a href="Certificates/Aviatrix Multicloud Network Associate.pdf" target="_blank" class="modal-link">
+                    <i class="fas fa-file-alt"></i> Aviatrix MultiCloud Network
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
